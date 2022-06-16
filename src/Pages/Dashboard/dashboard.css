@@ -1,0 +1,104 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #4e4d4d;
+}
+::-webkit-scrollbar-thumb {
+  background: #8c8c8c;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.Dash {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+  background: #1f2125;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+.dash-bg-Fade {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  z-index: -1;
+  transform: translate(-20%, -20%);
+  background: rgba(89, 96, 116, 0.551);
+  filter: blur(226.884px);
+}
+.dhashboardConatainer{
+  z-index: 4!important;
+  width: 100%;
+  height: auto;
+}
+#LeftSide {
+  width: auto!important;
+  overflow-x: hidden!important;
+}
+ /* #rightSide {
+  width: 100% !important;
+  height: auto !important;
+  background-blend-mode: darken;
+  overflow-y: scroll;
+} */
+/*.dhashboardConatainer {
+  width: 100% !important;
+  height: auto !important;
+  padding: 2vh 2vw;
+}
+
+.profileImage {
+  width: 50px;
+  height: 80% !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#topnavBar {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(
+    263.22deg,
+    #220555 15.17%,
+    #1e0945 26.46%,
+    #130a30 57.73%,
+    #0a0b1f 82.58%
+  );
+}
+#naveToggler {
+  width: 100% !important;
+  height: auto;
+  left: -10vw;
+  margin: 0 0 0 10vw;
+  padding: 2vh 5vw;
+  background: linear-gradient(
+    97.77deg,
+    #0b1b6d 4.81%,
+    rgba(11, 27, 109, 0) 128.13%
+  ) !important;
+  box-shadow: 20px 20px 60px #0053f8;
+}
+#NavBtnBurger {
+  width: 50px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  font-size: 20px !important;
+  position: absolute !important;
+}
+
+#navLogo {
+  font-size: 1.7rem;
+  margin-bottom: 2vh;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+}
+Nav.Link {
+  font-size: 2.8vmin;
+  margin-bottom: 2vh;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+} */

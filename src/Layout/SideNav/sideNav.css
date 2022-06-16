@@ -1,0 +1,118 @@
+.dash-sideNav {
+  width: auto;
+  height: 94vh;
+  border: 0.5px solid silver;
+  background: linear-gradient(
+    180.71deg,
+    #393b40 -52.8%,
+    rgba(33, 35, 39, 0) 211.15%
+  );
+  filter: drop-shadow(0px 30px 41px rgba(0, 0, 0, 0.5));
+  box-shadow: 20px 20px 60px #1a1c1f, -20px -20px 60px #24262b;
+  border-radius: 18px;
+}
+.sideNavFade {
+  width: 100%;
+  height: 40vh;
+  position: absolute;
+  background: rgba(172, 176, 189, 0.949);
+  filter: blur(226.884px);
+}
+.dash_logo h3 {
+  height: 60px;
+  width: 100%;
+  color: #12ef35;
+}
+.sidenav_btn {
+  width: 100%;
+  height: 100%;
+}
+#DashboardLogo {
+  color: #12ef35;
+}
+#sideNavBtn {
+  z-index: 99;
+}
+#sideBarBtn {
+  background: none !important;
+  border: none !important;
+}
+
+#sideNavBtn Button:active,
+#sideNavBtn Button:hover ,.dropdownSingleBtn{
+  background: rgba(255, 255, 255, 0.36) !important;
+  color: white;
+}
+.dropdownSingleBtn{
+  margin-left: 10px;
+}
+#sideNavBtn Button:focus ,#sideNavBtn .dropdownSingleBtn:focus{
+  margin-left: 12px;
+  background: rgba(255, 255, 255, 0.36) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  color: #12ef35;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dash_logo .closemenu {
+  background: rgba(57, 57, 57, 0.26);
+  border-top-right-radius: 16px;
+  border: 0.1px solid silver;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  color: white !important;
+  position: absolute;
+  width: 95%;
+  right: 15px;
+  box-shadow: -18px 5px 25px #1919688c !important;
+  z-index: 9999;
+  bottom: 20px;
+  font-weight: bold;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+#sideNavDropdown {
+  width: 100% !important;
+  height: 45px !important;
+  display: flex !important;
+}
+#Dropdownbody {
+  overflow: visible !important;
+  position: absolute !important;
+  z-index: 1200;
+  right: 0!important;
+  margin-left: 120px!important;
+  background: rgba(50, 50, 51, 0.535);
+  box-shadow: 0 8px 32px 0 rgba(7, 95, 63, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#dropdown-basic {
+  width: 100%!important;
+  padding-left: 0!important;
+  display: flex !important;
+  align-items: center !important;
+}
+#dropdown-basic:active {
+  background: red!important;
+}
+button#dropdown-basic.btn::after{
+  display: none!important;
+}
+button#dropdown-basic.btn{
+  /* background: red!important; */
+  width: 100%!important;
+}
+
+#sideBarBtn{
+  margin-right: 0!important;
+  width: 100%!important;
+  
+}
+/* button#sidebarBtn. */

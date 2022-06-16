@@ -1,0 +1,167 @@
+@import url("http://fonts.cdnfonts.com/css/clash-display");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  overflow-x: hidden;
+  text-decoration: none;
+  transition: .3s inherit;
+  font-family: "Oswald", sans-serif;
+  /* font-family: 'Clash Display', sans-serif;  */
+  /* font-family: 'Open Sans', sans-serif; */
+}
+:root {
+  /*-----bootstrap colors-----*/
+  --color-primary: #0275d8;
+  --color-success: #5cb85c;
+  --color-info: #5bc0de;
+  --color-warning: #f0ad4e;
+  --color-danger: #d9534f;
+  --color-dark: #292b2c;
+  --color-white: #f7f7f7;
+  --color-one: #00fff2;
+
+  /*-----general component root-----*/
+  --card-box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.2);
+  --border-radius: 18px;
+  --rate-backgrou: #ffc567;
+  --Oswald-font-family: "Oswald", sans-serif;
+  --Clash-font-family: "Clash Display", sans-serif;
+
+  /*-----dark theme colors-----*/
+  --dark-theme-background-color: #1f2125;
+  --dark-theme-Nav--background-color: #282a2f;
+  --dark-theme-card-background: linear-gradient(
+    104.11deg,
+    #484c57 -39.79%,
+    #1d1f23 116.43%
+  );
+  --dark-theme-color-white: #ffffff;
+  --dark-theme-button-background: linear-gradient(
+    101.18deg,
+    #32343b 23.52%,
+    rgba(114, 117, 129, 0) 126.23%
+  );
+  --dark-theme-button-filter: drop-shadow(
+    0px 10.4065px 21.3333px rgba(0, 0, 0, 0.4)
+  );
+
+  /*-----light theme colors-----*/
+
+  /*-----dark blue theme colors-----*/
+  /*-----light pink theme colors-----*/
+  /*-----gradient theme colors-----*/
+}
+
+.App {
+  width: 100vw !important;
+  height: 100vh !important;
+  /* background: var(--dark-theme-background-color); */
+  color: var(--dark-theme-color-white);
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #5cb85c radial-gradient(circle, transparent 1%, #5cb85c 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #5cb85c;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+.transition-page{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.transtion-box span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+}
+
+.transtion-box span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  animation: transit 1.5s ease-out infinite;
+}
+
+.transtion-box span:first-child {
+  background-color: #ff414d;
+}
+
+.transtion-box span:first-child::before {
+  animation-delay: 0.2s;
+}
+
+.transtion-box span:nth-child(2) {
+  background-color: #ff7a00;
+  transform: scale(0.9);
+}
+
+.transtion-box span:nth-child(2)::before {
+  animation-delay: 0.4s;
+}
+
+.transtion-box span:nth-child(3) {
+  background-color: #28df99;
+  transform: scale(0.8);
+}
+
+.transtion-box span:nth-child(3)::before {
+  animation-delay: 0.6s;
+}
+
+.transtion-box span:nth-child(4) {
+  background-color: #81b214;
+  transform: scale(0.7);
+}
+
+.transtion-box span:nth-child(4)::before {
+  animation-delay: 0.8s;
+}
+
+.transtion-box span:last-child {
+  background-color: #f09ae9;
+  transform: scale(0.6);
+}
+
+.transtion-box span:last-child::before {
+  animation-delay: 1s;
+}
+
+@keyframes transit {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}

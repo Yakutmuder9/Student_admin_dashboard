@@ -1,0 +1,67 @@
+.ourCourse {
+    width: 100%;
+    height: auto;
+    display: grid;
+    background: rgba(21, 0, 255, 0.052);
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+  .imgPart {
+    color: #000062;
+    box-shadow: 10px 5px 16px -5px #000048, 5px -2px 6px #000062;
+    height: 50%;
+  }
+  .imgPart img {
+    width: 100%;
+    height: 100% !important;
+  }
+  
+  .coursegrops {
+    border: 0.001px solid silver;
+    background: linear-gradient(
+      180.71deg,
+      #393b40 -52.8%,
+      rgba(33, 35, 39, 0) 211.15%
+    );
+    filter: drop-shadow(0px 30px 41px rgba(0, 0, 0, 0.5));
+    box-shadow: 20px 20px 60px #1a1c1f, -20px -20px 60px #24262b;
+    border-radius: 8px;
+  }
+  .select-text {
+    color: #12ef35;
+  }
+  .addToCartbtn{
+      background: #12ef35!important;
+  }
+  
+   #button:hover{
+      background: #04a41e!important;
+  }
+  #button:active {
+      border: 1px solid #12ef35;
+      background: 1px solid #12ef35;
+  }
+  #button:focus {
+      border: 1px solid #12ef35;
+      background-color: 1px solid #12ef35!important;
+  }
+  /* 
+  #list-tab{
+      display: flex!important;
+  }
+  #button {
+    border: 1px solid #12ef35;
+  }
+  #button:active {
+    border: 1px solid #12ef35;
+    background: 1px solid #12ef35;
+  }
+  #button:focus {
+    border: 1px solid #12ef35;
+    background-color: 1px solid #12ef35;
+  }
+  
+  .addToCartbtn{
+      background: #12ef35!important;
+  } */
+  
