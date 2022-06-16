@@ -3,7 +3,6 @@ import {  Outlet } from "react-router-dom";
 import SideNav from "../../Layout/SideNav/SideNav";
 import Footer from "../../Layout/Footer/DashFooter/Footer";
 import Header from "../../Layout/Header/DashHeader/Header";
-import Help from "../Help/help";
 
 const dashboard = () => {
   return (

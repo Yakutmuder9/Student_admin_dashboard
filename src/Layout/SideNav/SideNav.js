@@ -4,8 +4,7 @@ import { ProSidebar, SidebarHeader } from "react-pro-sidebar";
 import { Button } from "reactstrap";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import "react-pro-sidebar/dist/css/styles.css";
-import { NavLink, Link } from "react-router-dom";
-import { BsFillCaretRightFill } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 
 const SideNav = () => {
