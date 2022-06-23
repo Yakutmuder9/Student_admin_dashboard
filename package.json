@@ -68,10 +68,10 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yakutmuder9/React-Student-Admin-Dashboard.git"
+    "url": "git+https://github.com/Yakutmuder9/Student-admin-dashboard.git"
   },
   "bugs": {
-    "url": "https://github.com/Yakutmuder9/React-Student-Admin-Dashboard/issues"
+    "url": "https://github.com/Yakutmuder9/Student-admin-dashboard/issues"
   },
-  "homepage": "https://github.com/Yakutmuder9/React-Student-Admin-Dashboard#readme"
+  "homepage": ""
 }
