@@ -1,18 +1,32 @@
 import "./sideNav.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ProSidebar, SidebarHeader } from "react-pro-sidebar";
 import { Button } from "reactstrap";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import "react-pro-sidebar/dist/css/styles.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import { db } from "../../Auth/firebase/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const SideNav = () => {
+  const [dropdown, setDropdown] = useState([]);
+  const courseaEnrolledRef = collection(db, "enrollment");
   const [menuCollapse, setMenuCollapse] = useState(false);
 
   const menuIconClick = () => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(courseaEnrolledRef);
+      setDropdown(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getUsers();
+  }, []);
   return (
     <ProSidebar
       collapsed={menuCollapse}
@@ -73,7 +87,7 @@ const SideNav = () => {
 
 
         <NavLink
-          to=""
+          to="#"
           className="text-decoration-none btn-group dropend w-100 
          overflow-visible d-flex "
         >
@@ -102,14 +116,24 @@ const SideNav = () => {
               </div>{" "}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu className="position-absolute "  id='Dropdownbody'>
-              <Dropdown.Item href="#/action-1" className='text-success'>Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2" className='text-success'>Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3" className='text-success'>Something else</Dropdown.Item>
+            <Dropdown.Menu className=" bg-secondary"  id='Dropdownbody'>
+
+                  {dropdown.map((drop,key)=>{
+                    return(
+                      <Dropdown.Item href="#/action-1" key={key} ><Link to='courses' className='text-warning py-2 text-decoration-none'>{drop.titel.slice(0,25)}</Link></Dropdown.Item>
+                    )
+                  })}
+             <Link to="getCourse" type='button' className="ms-3 bg-dark px-2 py-1 text-decoration-none text-secondary">Add Course +</Link>
+
             </Dropdown.Menu>
 
           </Dropdown>
         </NavLink>
+        
+
+
+
+        
         <NavLink to="/dashboard/event" className="text-decoration-none">
           <Button
             className="d-flex w-100 mt-2 py-2"

@@ -91,7 +91,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="row shadow-lg rounded-circle vw-100 vh-100">
+      <div className="row shadow-lg rounded-circle vw-100 vh-100" id="loginModal">
         <div className="col d-none d-xl-block">
           <div
             className={

@@ -1,4 +1,7 @@
 /*----------------Roller-------------------*/
+.modal-content{
+  overflow-x: hidden;
+}
 .roller {
   position: absolute;
   width: 2000px;

@@ -514,12 +514,12 @@ const Profile = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                    <div class="card h-100 card-plain border">
+                  <div class="col-xl-3 col-md-6 mb-xl-0 mb-4" >
+                    <div class="card h-100 card-plain border"id='addProjectripple'>
                       <div class="card-body d-flex flex-column justify-content-center text-center">
                         <Link
                           to=""
-                          className="dotBrder d-flex align-items-center justify-content-center ripple"
+                          className="dotBrder d-flex align-items-center justify-content-center ripple request-loader"
                         >
                           <FaPlus className="addCourse " />
                         </Link>

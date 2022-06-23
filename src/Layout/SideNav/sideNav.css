@@ -80,18 +80,26 @@
   height: 45px !important;
   display: flex !important;
 }
+#Dropdown-item:hover {
+  color: #12ef35;
+  background: black!important;
+}
 #Dropdownbody {
-  overflow: visible !important;
-  position: absolute !important;
+  transform: translate(-50%,-50%);
   z-index: 1200;
-  right: 0!important;
-  margin-left: 120px!important;
+  margin-left: 40px!important;
   background: rgba(50, 50, 51, 0.535);
   box-shadow: 0 8px 32px 0 rgba(7, 95, 63, 0.37);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.dropdown-toggle.dropdownSingleBtn::after{
+  position: absolute;
+  right: 30%;
+  margin-bottom: 5px;
+  transform: rotate(90deg);
 }
 #dropdown-basic {
   width: 100%!important;

@@ -4,12 +4,10 @@ import Dashboard from "./Pages/Dashboard/dashboard";
 import DashActivity from "./Pages/Dashboard/DashActive/DashActivity";
 import HomePage from "./Pages/HomePage/home";
 import Course from "./Pages/Course/course";
-import Event from "./Pages/Event/event";
+import Event from "./Pages/Event/event.js";
 import Inbox from "./Pages/Inbox/inbox";
 import Resources from "./Pages/Resource/Resources";
 import Profile from "./Pages/Profile/Profile";
-
-import { Spinner } from "reactstrap";
 import CourseStore from "./Pages/Course/Coursestore/CourseStore";
 import Help from "./Pages/Help/help";
 import ProtectedRoute from "./Auth/firebase/ProtectedRoutes";
@@ -25,7 +23,7 @@ function App() {
     <div className="App ">
       <UserAuthContextProvider>
         <Routes>
-          <Route path="" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
 
           {user ? (
             <Route
@@ -109,13 +107,13 @@ function App() {
             <Route
               path="*"
               element={
-                <div className="transition-page">
-                <div className="transtion-box">
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
+                <div className="transition-page overflow-auto">
+                <div className="transtion-box  position-absolute">
+                  <span className="wave-item "></span>
+                  <span className="wave-item "></span>
+                  <span className="wave-item "></span>
+                  <span className="wave-item "></span>
+                  <span className="wave-item "></span>
                 </div>
               </div>
               }

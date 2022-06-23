@@ -11,11 +11,18 @@
  
 .blog{
     height: 100%;
-    background: rgba(33, 32, 104, 0.292);
+    border: 0.001px solid silver;
+    border-radius: 8px;
 }
 .item .title{
     height: auto;
-    background: rgb(63, 11, 122);
+    background: linear-gradient(
+      180.71deg,
+      #393b40 -52.8%,
+      rgba(33, 35, 39, 0) 211.15%
+    );
+    filter: drop-shadow(0px 30px 41px rgba(0, 0, 0, 0.5));
+    box-shadow: 2px 2px 6px #1a1c1f, -20px -20px 60px #24262b;
 }
 .item .desc{
     height: auto;
@@ -51,7 +58,9 @@
  .grid .blog {
     grid-row-end: span 1;
  }
- 
+ #startReadBtn{
+  background: #5cb85c;
+ }
 
 #listcontrol{
     transition: .3s ease-in-out;

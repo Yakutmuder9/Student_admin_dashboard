@@ -16,14 +16,15 @@ const Resources = () => {
     return<div>No data </div>
   };
 
-  const classListHandler = () => {
-    setShow(0);
-    return<div>No data </div>
-  };
+  
+  // const classListHandler = () => {
+  //   setShow(0);
+  //   return<div>No data </div>
+  // };
 
   return (
     <div className="px-3">
-      <h1 className="ps-5 mt-2">Resources</h1>
+      <h1 className="ps-3 mt-2 overflow-hidden">Resources</h1>
       <div className="container">
         <div class="input-group ">
           <div class="form-outline w-50 ">
@@ -85,7 +86,7 @@ const Resources = () => {
               <div class="booklist grid rounded">
               <div class="item blog ">
                 <div class="title p-3">
-                  <h4>{value.title}</h4>
+                  <h4 className="overflow-hidden">{value.title}</h4>
                   <p>ISBN: {value.isbn}</p>
                 </div>
                 <div class="desc d-flex p-3">
@@ -96,7 +97,7 @@ const Resources = () => {
                   </p>
                   <div className="d-flex justify-content-between align-items-end" >
                     <p className="w-50 h-50">{value.authors}</p>
-                    <button className="btn btn-warning h-50 mb-3">Start Read..</button>
+                    <button className="btn h-50 mb-3 me-1" id="startReadBtn">Start Read..</button>
                   </div>
                   </div>
                   

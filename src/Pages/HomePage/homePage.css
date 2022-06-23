@@ -1,13 +1,9 @@
 #HomeComp {
   width: 100vw;
-  height: 200vh;
+  height: auto;
+  overflow-x: hidden;
   background: var(--dark-theme-background-color);
 }
-
-
-
-
-
 
 
 

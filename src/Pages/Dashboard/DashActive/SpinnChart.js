@@ -191,21 +191,21 @@ export const ProgressChart = () => {
 export const CourseProgressTabel = () => {
   return (
     
-    <div class="card-body px-0 pb-2">
-    <div class="table-responsive">
-      <table class="table align-items-center mb-0">
+    <div className="card-body px-0 pb-2">
+    <div className="table-responsive">
+      <table className="table align-items-center mb-0">
         <thead>
           <tr>
-            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+            <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
               Courses
             </th>
-            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+            <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
               Groups
             </th>
-            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+            <th className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
               Projects
             </th>
-            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+            <th className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
               Completion
             </th>
           </tr>
@@ -213,49 +213,49 @@ export const CourseProgressTabel = () => {
         <tbody>
           <tr>
             <td>
-              <div class="d-flex px-2 py-1">
+              <div className="d-flex px-2 py-1">
                 <div>
-                  <img src="img/bootstrap.png" class="avatar avatar-sm me-3" alt="xd" />
+                  <img src="img/bootstrap.png" className="avatar avatar-sm me-3" alt="xd" />
                 </div>
-                <div class="d-flex flex-column justify-content-center">
-                  <h6 class="mb-0 text-sm"> Bootstrap 5 Version</h6>
+                <div className="d-flex flex-column justify-content-center">
+                  <h6 className="mb-0 text-sm"> Bootstrap 5 Version</h6>
                 </div>
               </div>
             </td>
             <td>
-              <div class="avatar-group mt-2">
-                <a href="" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+              <div className="avatar-group mt-2">
+                <a href="" className="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
                   data-bs-placement="bottom" title="Ryan Tompson">
                   <img src="img/p1.jpg" alt="team1" />
                 </a>
-                <a href="" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                <a href="" className="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
                   data-bs-placement="bottom" title="Romina Hadid">
                   <img src="img/p2.jpg" alt="team2" />
                 </a>
-                <a href="" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                <a href="" className="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
                   data-bs-placement="bottom" title="Alexander Smith">
                   <img src="img/p3.jpg" alt="team3" />
                 </a>
-                <a href="" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                <a href="" className="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
                   data-bs-placement="bottom" title="Jessica Doe">
                   <img src="img/p4.jpg" alt="team4" />
                 </a>
               </div>
             </td>
-            <td class="align-middle text-center text-sm">
-              <span class="text-xs font-weight-bold">
+            <td className="align-middle text-center text-sm">
+              <span className="text-xs font-weight-bold">
                 122
               </span>
             </td>
-            <td class="align-middle">
-              <div class="progress-wrapper w-75 mx-auto">
-                <div class="progress-info">
-                  <div class="progress-percentage">
-                    <span class="text-xs font-weight-bold">25%</span>
+            <td className="align-middle">
+              <div className="progress-wrapper w-75 mx-auto">
+                <div className="progress-info">
+                  <div className="progress-percentage">
+                    <span className="text-xs font-weight-bold">25%</span>
                   </div>
                 </div>
-                <div class="progress">
-                  <div class="progress-bar bg-gradient-info w-25" role="progressbar" aria-valuenow="25"
+                <div className="progress">
+                  <div className="progress-bar bg-gradient-info w-25" role="progressbar" aria-valuenow="25"
                     aria-valuemin="0" aria-valuemax="25"></div>
                 </div>
               </div>

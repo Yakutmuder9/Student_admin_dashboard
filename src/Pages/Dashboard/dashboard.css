@@ -33,17 +33,20 @@
   z-index: 4!important;
   width: 100%;
   height: auto;
+  overflow-x: hidden!important;
+  overflow-y: scroll!important;
 }
 #LeftSide {
   width: auto!important;
   overflow-x: hidden!important;
 }
- /* #rightSide {
+ #rightSide {
   width: 100% !important;
   height: auto !important;
   background-blend-mode: darken;
   overflow-y: scroll;
-} */
+  padding-bottom: 3px;
+}
 /*.dhashboardConatainer {
   width: 100% !important;
   height: auto !important;

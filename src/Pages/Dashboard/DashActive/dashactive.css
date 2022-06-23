@@ -23,6 +23,7 @@
   background: #202127;
   box-shadow: inset 20px 20px 60px #1b1c21, inset -20px -20px 60px #25262d;
   overflow-y: visible !important;
+  
 }
 #coursBody {
   width: 100% !important;
@@ -51,12 +52,20 @@
   align-items: center;
   overflow-y: hidden !important;
   height: 100%;
+  overflow-x: hidden!important;
   z-index: 1222 !important;
 }
 #showCard {
-  background: yellowgreen;
+  width: 180px!important;
+  background: rgba(50, 50, 51, 0.535);
+  box-shadow: 0 8px 32px 0 rgba(7, 95, 63, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 3px solid rgb(163, 163, 163);
   height: 100% !important;
-  border-radius: 12px;
+  border-radius: 18px;
+  overflow: hidden;
 }
 #showCard img {
   height: 75px !important;
@@ -99,10 +108,122 @@ text *:not(:hover){
   background: rgba(32, 33, 36, 0.786)!important;
   border: none!important;
 }
+
 @media (max-width: 1200px) {
   #dashFullfil {
     height: auto;
   }
+  #showCard {
+    width: 180px!important;
+  }
+}
+@media (max-width: 690px) {
+  #showCard {
+    align-items: left!important;
+    width: 190px!important;
+  }
+}
+/*--Ripple animation--*/
+#addCourseripple{
+  overflow: visible!important;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.request-loader {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+.request-loader span {
+  position: relative;
+  font-size: 72px;
+  top: 5px;
+  left: -5px;
+}
+.request-loader::after {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: -1;
+}
+.request-loader::before {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: -1;
 }
 
-/*----*/
+@-webkit-keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
+}

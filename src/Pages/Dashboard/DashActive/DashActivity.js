@@ -1,6 +1,6 @@
 import "./dashactive.css";
 import { useState, useEffect } from "react";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../Auth/firebase/firebase";
 import nothing from "../../../App/assets/images/nothing.svg";
@@ -70,7 +70,7 @@ const DashActivity = () => {
             <div>
 
               <div className="row ">
-                <div className="col-lg-8  mb-3">
+                <div className="col-lg-8 overflow-hidden mb-3">
                   <div className="dashCourseFade"></div>
                   <div className="p-2" id="dashCourse">
                     <div className="d-flex justify-content-between mb-3 px-2 mb-2 align-items-start">
@@ -85,9 +85,9 @@ const DashActivity = () => {
                           Add course
                         </h6>
                       </div>
-                      <div className="d-flex justify-content-end position-absolute w-100  py-1 pe-4 mb-2  ">
-                     <a href="dashboard/getcourse">  <button className="btn btn-success rounded-circle overflow-hidden mb-2 ripple">
-                          +
+                      <div className="d-flex border-outline-secondary justify-content-end shadow position-absolute w-100 px-4 mb-3  ">
+                     <a href="dashboard/getcourse">  <button className="btn btn-secondary overflow-hidden mb-2 ripple px-3" id="addCourseripple">
+                         <span>+</span>
                         </button></a> 
                       </div>
                     </div>
@@ -97,7 +97,7 @@ const DashActivity = () => {
                         {activeDashCourse.map((active, key) => {
                           return (
                             <div
-                              className="card h-100 mx-4 my-2"
+                              className="card h-100 me-4 ms-2 my-2"
                               style="width: 18rem;"
                               key={key}
                               id="showCard"
@@ -109,9 +109,9 @@ const DashActivity = () => {
                               />
                               <div className="card-body bg-dark">
                                 <p className="card-title">
-                                  {active.titel.substring(0, 16)}..
+                                  {active.titel.substring(0, 20)}..
                                 </p>
-                                <a href="#" className="btn btn-success ripple">
+                                <a href="#" className="btn btn-dark border-secondary ripple">
                                   Go ..
                                 </a>
                               </div>
@@ -123,7 +123,7 @@ const DashActivity = () => {
                   </div>
                 </div>
 
-                <div className="col-lg-4 mb-3">
+                <div className="col-lg-4 overflow-hidden mb-3">
                   <div className="overflow-hidden" id="dashlevel">
                   
                   <ProgressChart/>
@@ -133,14 +133,14 @@ const DashActivity = () => {
               </div>
 
               <div className="row">
-                <div className="col-lg-8 mb-3">
+                <div className="col-lg-8 overflow-hidden mb-3">
                   <div className="dashCourseFade"></div>
                   <div className=" " id="dashGrade">
                     rdd 3
                   </div>
                 </div>
 
-                <div className="col-lg-4 mb-3">
+                <div className="col-lg-4 overflow-hidden mb-3">
                   <div className=" overflow-hidden " id="dashFullfil">
                     <SpinnChart />
                   </div>
@@ -149,12 +149,12 @@ const DashActivity = () => {
               </div>
 
               <div className="row">
-                <div className="col-lg-4  mb-3">
+                <div className="col-lg-4 overflow-hidden mb-3">
                   <div className="" id="dashGPA">
                     col-sm-5
                   </div>
                 </div>
-                <div className="col-lg-8  mb-3">
+                <div className="col-lg-8 overflow-hidden mb-3">
                   <div className="" id="dashHourse">
                     <CourseProgressTabel />
                   </div>

@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <div className="footer bg-white">
+    <div className="footer shadow-lg border border-secondary">
       <div className="container-fluid">
-        <div className="d-flex p-1 justify-content-between align-items-center align-items-center">
+        <div className="d-flex p-1 justify-content-between align-items-center">
           <div className="">
-            <div className="text-dark bolder">
+            <div className="text-secondary bolder">
               ©<script>document.write(new Date().getFullYear());</script>, made
               by
               <a href="" className="font-weight-bold ">

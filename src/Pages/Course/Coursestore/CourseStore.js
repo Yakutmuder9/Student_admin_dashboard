@@ -2,22 +2,20 @@ import { useEffect, useState } from "react";
 import { db } from "../../../Auth/firebase/firebase";
 // import firebase from 'firebase/compat/app';
 import "./CourseStore.css";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  setDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore";
-import { async } from "@firebase/util";
-import Course from "../course";
+import { collection, getDocs, setDoc, doc } from "firebase/firestore";
 
 const CourseStore = () => {
-  const [courseFilter, setCourseFilter] = useState();
+  const [courseFilter, setCourseFilter] = useState([]);
+  const [paymentModal, setPayemnetModal] = useState(false);
   const [courses, setCourses] = useState([]);
   const showCourseRef = collection(db, "course");
+  const courseFilterRef = collection(db, "enrollment");
+
+  const chackEnrollCourse = async () => {
+    const chack = await getDocs(courseFilterRef);
+    setCourseFilter(chack.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+  chackEnrollCourse();
 
   useEffect(() => {
     const getUsers = async () => {
@@ -27,6 +25,26 @@ const CourseStore = () => {
 
     getUsers();
   }, []);
+
+
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+
+
+
+
 
   //   let newbtn = showCourseRef.filter((e) => e.group === 1);
   //   let bignner = showCourseRef.filter((e) => e.group === 2);
@@ -42,6 +60,19 @@ const CourseStore = () => {
   }
 
   const createEnrolledCourse = async (id, url, titel, dicription, group) => {
+    const found = courseFilter.find((obj) => {
+      return obj.id === id;
+    });
+
+    if (found) {
+      console.log('already enrolled')
+      return setPayemnetModal(false);
+    } else {
+      // window.location.reload(false);
+      console.log("payment")
+      return setPayemnetModal(true);
+    }
+
     await setDoc(doc(db, "enrollment", id), {
       url: url,
       titel: titel,
@@ -51,7 +82,7 @@ const CourseStore = () => {
   };
 
   return (
-    <div className=" justify-content-between mx-3">
+    <div className=" justify-content-between mx-3" id="courseShow">
       <div className="d-flex justify-content-between  mb-2">
         <div>
           <h2 className="font-weight-bold overflow-hidden">
@@ -112,8 +143,11 @@ const CourseStore = () => {
               >
                 <h5 className="pt-2 ps-2 overflow-hidden">{course.group}$</h5>
                 <button
-                  className="btn addToCartbtn"
+                  className="btn btn-success addToCartbtn"
                   id={course.courseNum}
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                   onClick={() => {
                     createEnrolledCourse(
                       course.id,
@@ -126,6 +160,43 @@ const CourseStore = () => {
                 >
                   Buy Course
                 </button>
+               
+                  <div
+                    className="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5 className="modal-title" id="exampleModalLabel">
+                            the item is already enrolled
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="modal-body">...</div>
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" className="btn btn-primary">
+                            Save changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           );
